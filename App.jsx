@@ -1,0 +1,29 @@
+import React from "react";
+import './style.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from "./Components/Navbar.jsx";
+import Home from "./Components/Home.jsx";
+import About from "./Components/About.jsx";
+import Contact from "./Components/Contact.jsx";
+import Footer from "./Components/Footer.jsx";
+
+const App = () => {
+  return (
+    <>
+    <Navbar />
+    
+    <Routes>
+   
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+           <Route path="/Contact" element={<Contact />} />
+           
+
+      </Routes>
+      <Footer />
+   </>
+  );
+};
+
+export default App;
